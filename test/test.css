@@ -62,7 +62,7 @@ button {
 }
 
 .container {
-    position: absolute;
+    position: center;
     top: 0;
     z-index: 100000;
 }
