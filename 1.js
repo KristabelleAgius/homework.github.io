@@ -16,15 +16,12 @@ const params = {
     friction: 0.5,
 };
 
-const trail = new Array(params.pointsNumber);
-for (let i = 0; i < params.pointsNumber; i++) {
-    trail[i] = {
-        x: pointer.x,
-        y: pointer.y,
-        dx: 0,
-        dy: 0,
-    };
-}
+const trail = new Array(params.pointsNumber).fill(null).map(() => ({
+    x: pointer.x,
+    y: pointer.y,
+    dx: 0,
+    dy: 0,
+}));
 
 window.addEventListener("click", (e) => {
     updateMousePosition(e.pageX, e.pageY);
@@ -38,7 +35,7 @@ window.addEventListener("mousemove", (e) => {
 window.addEventListener("touchmove", (e) => {
     mouseMoved = true;
     const touch = e.targetTouches[0];
-    updateMousePosition(e.targettOUCHES[0].PAGEx, E.TARGETtouches[0].pageY);
+    updateMousePosition(touch.pageX, touch.pageY);
 });
 
 function updateMousePosition(eX, eY) {
@@ -71,7 +68,7 @@ function update(t) {
         p.y += p.dy;
     });
 
-    var gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
     gradient.addColorStop(0, "rgba(160, 93, 134, 1)");
     gradient.addColorStop(1, "rgba(57, 34, 115, 1)");
 
@@ -84,7 +81,7 @@ function update(t) {
         const xc = 0.5 * (trail[i].x + trail[i + 1].x);
         const yc = 0.5 * (trail[i].y + trail[i + 1].y);
         ctx.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc);
-        ctx.lineWidth = params.widthFactor * (params.pointsNumber - i); ctx.stroke();
+        ctx.lineWidth = params.widthFactor * (params.pointsNumber - i) / params.pointsNumber;
     }
 
     ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
