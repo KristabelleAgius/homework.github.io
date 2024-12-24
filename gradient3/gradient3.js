@@ -13,7 +13,7 @@ const pointer = {
 
 const params = {
     pointsNumber: 40,
-    widthFactor: 6000,  // Increased from 3000 to 6000 to make the line thicker
+    widthFactor: 20000,  // Increased to 20,000 for a much thicker line
     mouseThreshold: 0.5,
     spring: 0.25,
     friction: 0.5,
@@ -129,5 +129,3 @@ function init() {
 
 // Start the animation
 init();
-
-Version 2 of 2
