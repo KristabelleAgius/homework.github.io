@@ -12,7 +12,7 @@ const pointer = {
 };
 
 const params = {
-    pointsNumber: 40,
+    pointsNumber: 60,
     widthFactor: 10000,
     mouseThreshold: 0.5,
     spring: 0.25,
