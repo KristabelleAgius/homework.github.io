@@ -10,18 +10,25 @@ html,
 body {
     background: #10092c;
     overscroll-behavior: none;
-    /* Corrected typo in "overscroll-behaviour" */
     font-family: "Inter", sans-serif;
-    /* Ensure "Inter" is imported if used */
 }
 
 .header {
     padding: 4em;
     opacity: 0.75;
+    text-align: center;
+    /* Center align all header content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    /* This gives some vertical centering */
 }
 
 .header h1 {
-    width: 60%;
+    width: 80%;
+    /* Increased from 60% for better mobile responsiveness */
     background: linear-gradient(to top, #cecece 0%, #ffffff 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -30,6 +37,10 @@ body {
     font-size: 80px;
     letter-spacing: -0.05em;
     line-height: 1;
+    margin: 0 auto;
+    /* Center the heading block */
+    text-align: center;
+    /* Ensure text is centered */
 }
 
 button {
@@ -40,7 +51,6 @@ button {
     border: 1px solid rgba(149, 99, 255, 0.5);
     outline: none;
     border-radius: 0.75em;
-    /* Fixed typo in border-radius colon */
     backdrop-filter: blur(20px);
     cursor: pointer;
     background: linear-gradient(180deg,
@@ -65,4 +75,18 @@ button {
     position: absolute;
     top: 0;
     z-index: 100000;
+    width: 100%;
+    /* Added to ensure container spans full width */
+}
+
+/* Add media query for better mobile responsiveness */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 40px;
+        width: 90%;
+    }
+
+    .header {
+        padding: 2em;
+    }
 }
