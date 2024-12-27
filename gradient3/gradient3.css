@@ -77,3 +77,21 @@ body {
         padding: 2em;
     }
 }
+
+.next-page-button {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.next-page-button:hover {
+    opacity: 1;
+    transform: translateY(-50%) rotate(90deg) scale(1.2);
+}
