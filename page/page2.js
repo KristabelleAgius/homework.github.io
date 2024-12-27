@@ -5,9 +5,9 @@ var Typewriter = new Typewriter(app, {
 });
 
 
-Typewriter
+typewriter
     .pauseFor(2000)
-    .typString('easily create cool and beautiful')
+    .typeString('easily create cool and beautiful')
     .pauseFor(300)
     .deleteChars(10)
     .typeString('<strong>Awesome</strong> multiline typewriter effect for')
