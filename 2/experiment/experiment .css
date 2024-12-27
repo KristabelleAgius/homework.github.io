@@ -1,0 +1,97 @@
+@import url("https://fonts.google.com/specimen/Concert+One?preview.text=SPECTRA&categoryFilters=Feeling:%2FExpressive%2FPlayful");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #10092c;
+    overscroll-behavior: none;
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    /* This ensures minimum full viewport height */
+    height: auto;
+    /* Allows content to expand the page */
+}
+
+.header {
+    padding: 4em;
+    opacity: 0.75;
+    text-align: center;
+    /* Center align all header content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    /* This gives some vertical centering */
+}
+
+.header h1 {
+    width: 80%;
+    /* Increased from 60% for better mobile responsiveness */
+    background: linear-gradient(to top, #cecece 0%, #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    font-size: 80px;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin: 0 auto;
+    /* Center the heading block */
+    text-align: center;
+    /* Ensure text is centered */
+}
+
+.glassy-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(50px);
+    pointer-events: none;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    z-index: 100000;
+    width: 100%;
+    /* Added to ensure container spans full width */
+}
+
+/* Add media query for better mobile responsiveness */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 40px;
+        width: 90%;
+    }
+
+    .header {
+        padding: 2em;
+    }
+}
+
+.next-page-button {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.next-page-button:hover {
+    opacity: 1;
+    transform: translateY(-50%) rotate(90deg) scale(1.2);
+}
