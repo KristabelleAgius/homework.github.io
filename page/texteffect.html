@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <title>text effect</title>
+    <style>
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .wrapper {
+            width: 70vw;
+        }
+
+        #app {
+            font-size: 34px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="app"></div>
+    </div>
+
+    <script>
+        var app = document.getElementById('app');
+        var typewriter = new Typewriter(app, {
+            loop: true,
+            delay: 75,
+        });
+
+        typewriter
+            .pauseFor(2000)
+            .typeString('easily create cool and beautiful ')
+            .pauseFor(300)
+            .deleteChars(10)
+            .typeString('<strong>Awesome</strong> multiline typewriter effect for ')
+            .typeString('<strong>your website in <span style="color:#27ae60">5 minutes.</span></strong>')
+            .pauseFor(1000)
+            .start();
+    </script>
+</body>
+
+</html>
