@@ -12,8 +12,8 @@ const pointer = {
 };
 
 const params = {
-    pointsNumber: 80,
-    widthFactor: 200000,  // Increased to 20,000 for a much thicker line
+    pointsNumber: 50,
+    widthFactor: 50000,  // Increased to 20,000 for a much thicker line
     mouseThreshold: 0.5,
     spring: 0.25,
     friction: 0.5,
