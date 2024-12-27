@@ -5,21 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="page1.css">
-    <title>About Us</title>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 
+<style>
+    body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .wrapper {
+        width: 70vw;
+    }
+
+    #app {
+        font-size: 34px;
+        font-family: monospace;
+    }
+</style>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>About Us</h1>
-        </div>
+    <div class="wrapper">
+        <div id="app"></div>
     </div>
 
-    <div class="glassy-overlay"></div>
-    <canvas></canvas>
-    <script src="./page1.js"></script>
-    <a href="page2.html" class="next-page-button">></a>
+
+    <script src="page2.js"></script>
 </body>
 
 </html>
