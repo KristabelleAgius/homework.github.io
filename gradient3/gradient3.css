@@ -11,6 +11,10 @@ body {
     background: #10092c;
     overscroll-behavior: none;
     font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    /* This ensures minimum full viewport height */
+    height: auto;
+    /* Allows content to expand the page */
 }
 
 .header {
