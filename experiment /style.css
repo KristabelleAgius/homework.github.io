@@ -1,4 +1,4 @@
-@import url("https://fonts.google.com/specimen/Concert+One?preview.text=SPECTRA&categoryFilters=Feeling:%2FExpressive%2FPlayful");
+@import url("https://fonts.google.com/specimen/Concert+One?preview.text=SPECTRA&categoryFilters=Feeling:%2FPlayful");
 
 * {
     margin: 0;
@@ -58,47 +58,16 @@ body {
     width: 100%;
 }
 
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 40px;
-        width: 90%;
-    }
-
-    .header {
-        padding: 2em;
-    }
-}
-
-.next-page-button {
-    position: fixed;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%) rotate(90deg);
-    font-size: 48px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    opacity: 0.7;
-}
-
-.next-page-button:hover {
-    opacity: 1;
-    transform: translateY(-50%) rotate(90deg) scale(1.2);
-}
-
-/* Text Effect Styles */
-.wrapper {
+.text-wrapper {
     width: 70vw;
     padding: 15px 40px;
     position: relative;
     z-index: 0;
     border-radius: 12px;
-    margin: 300px auto 20px auto;
+    margin: 20px auto;
 }
 
-.wrapper::after {
+.text-wrapper::after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -110,9 +79,11 @@ body {
     border-radius: 10px;
 }
 
-.wrapper::before {
+.text-wrapper::before {
     content: "";
-    background: linear-gradient(45deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000);
+    background: linear-gradient(45deg,
+            #FF0000, #FF7300, #FFFB00, #48FF00,
+            #00FFD5, #002BFF, #FF00C8, #FF0000);
     position: absolute;
     top: -2px;
     left: -2px;
@@ -122,9 +93,16 @@ body {
     height: calc(100% + 4px);
     filter: blur(8px);
     animation: glowing 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity .3s ease-in-out;
     border-radius: 10px;
     opacity: 1;
+}
+
+#app {
+    font-size: 34px;
+    font-family: monospace;
+    color: #FFF;
+    text-align: justify;
 }
 
 @keyframes glowing {
@@ -141,9 +119,22 @@ body {
     }
 }
 
-#app {
-    font-size: 34px;
-    font-family: monospace;
-    color: #FFF;
-    text-align: justify;
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 40px;
+        width: 90%;
+    }
+
+    .header {
+        padding: 2em;
+    }
+
+    #app {
+        font-size: 24px;
+    }
+
+    .text-wrapper {
+        width: 90vw;
+        padding: 10px 20px;
+    }
 }
